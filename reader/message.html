@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		.text-dark {
+			color: black;
+			font-family: YouYuan;
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			background-color: #f2f2f2;
+		}
+
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+
+		h1 {
+			text-align: center;
+			color: #333;
+			margin-bottom: 20px;
+		}
+
+		.message-container {
+			margin-top: 50px;
+		}
+
+		.message {
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			padding: 20px;
+			margin-bottom: 30px;
+			position: relative;
+			animation-name: message-anim;
+			animation-duration: 0.8s;
+			animation-fill-mode: both;
+			animation-timing-function: ease-in-out;
+		}
+
+		.message:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 10px;
+			z-index: -1;
+		}
+
+		.message-1:before {
+			background-color: #ff6347;
+		}
+
+		.message-2:before {
+			background-color: #00ced1;
+		}
+
+		.message-3:before {
+			background-color: #ffa500;
+		}
+
+
+		.message h3 {
+			font-size: 24px;
+			color: #fff;
+			margin-bottom: 10px;
+		}
+
+		.message p {
+			font-size: 16px;
+			color: #333;
+		}
+
+		@keyframes message-anim {
+			0% {
+				transform: scale(0);
+			}
+
+			80% {
+				transform: scale(1.1);
+			}
+
+			100% {
+				transform: scale(1);
+			}
+		}
+	</style>
+</head>
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<div align="center">
+	<h3 style="color:#F08080;"><span class="glyphicon glyphicon-align-left" aria-hidden="true">&nbsp; 留言板 </span></h3>
+</div>
+</link>
+<div class="container">
+	<div class="message-container">
+		<div class="message message-1">
+			<h3>Reader-1</h3>
+			<p>这个网站很棒，内容丰富、设计美观。</p>
+		</div>
+		<div class="message message-2">
+			<h3>Reader-2</h3>
+			<p>我对这个网站的界面设计非常喜欢，色彩搭配非常好看，建议增加一些互动功能。</p>
+		</div>
+		<div class="message message-3">
+			<h3>Reader-3</h3>
+			<p>加油。</p>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				$(".message").each(function (i) {
+					$(this).delay(i * 400).animate({
+						opacity: 1,
+						top: 0
+					}, 1000);
+				});
+			});
+		</script>
+		</body>
+
+</html>

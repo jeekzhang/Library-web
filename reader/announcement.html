@@ -1,0 +1,98 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<!-- Bootstrap -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<style>
+		
+
+		body {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+      }
+	  .aligncenter {
+			clear: both;
+			display: block;
+			margin: auto;
+			width:10%;
+			height:50px;
+		}
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #3771bb;
+        box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        border-radius: 5px;
+        animation: fadeIn 1s ease-in-out;
+      }
+      h1 {
+        font-size: 48px;
+        text-align: center;
+        margin-top: 0;
+        text-shadow: 2px 2px #000000;
+        animation: bounceIn 1s ease-in-out;
+      }
+      p {
+        font-size: 24px;
+        line-height: 1.5;
+        text-align: justify;
+        animation: slideIn 1s ease-in-out;
+      }
+      .tech {
+        color: #4CAF50;
+      }
+      
+      /* CSS animations */
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @keyframes bounceIn {
+        from { transform: scale(0.5); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+      }
+      @keyframes slideIn {
+        from { transform: translateX(-50%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+    </style>
+</head>
+<body>
+<div style="background-image: linear-gradient(80deg, #20B2AA, #1C86EE);height: 60px;;color:#fff;border-radius: 8px;width: 90%;margin:auto auto;">
+	<img class="aligncenter" src="../public/image/1.png" alt="...">
+</div>
+<p></p>
+<div class="container">
+	<p>尊敬的<span class="tech">用户</span>：</p>
+	<p>为了提供更好的服务，本站将于本周进行系统<span class="tech">维护</span>，届时可能会对部分功能造成影响。维护期间，我们将尽力缩短影响时间，给您带来的不便敬请谅解。</p>
+	<p>谢谢！</p>
+  </div>
+
+<!-- JavaScript for animations -->
+<script>
+	// When the page is loaded
+	window.addEventListener('load', function() {
+	  // Add the 'animated' class to the h1 and p elements
+	  document.querySelector('h1').classList.add('animated');
+	  document.querySelectorAll('p').forEach(function(p) {
+		p.classList.add('animated');
+	  });
+	});
+  </script>
+  
+  <!-- Add the animate.css library for animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</body>
+</html>

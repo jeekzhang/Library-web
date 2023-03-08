@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nifty Modal Window Effects</title>
+	<meta name="description" content="Nifty Modal Window Effects with CSS Transitions and Animations" />
+	<meta name="keywords"
+		content="modal, window, overlay, modern, box, css transition, css animation, effect, 3d, perspective" />
+	<meta name="author" content="Codrops" />
+
+	<!-- Bootstrap -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+
+
+	<link rel="stylesheet" type="text/css" href="../public/css/default.css" />
+	<link rel="stylesheet" type="text/css" href="../public/css/component.css" />
+	<script src="../public/js/modernizr.custom.js"></script>
+	<style>
+		body {
+			font-family: 'Helvetica Neue', sans-serif;
+			font-size: 16px;
+			line-height: 1.6;
+		}
+
+		.aligncenter {
+			clear: both;
+			display: block;
+			margin: auto;
+			width: 10%;
+			height: 50px;
+		}
+
+		.container {
+			background-color: lightblue;
+			margin: 0 auto;
+			max-width: 800px;
+			padding: 50px;
+			animation: fadeInUp 1s ease-out;
+		}
+
+		/* Timeline styles */
+		.timeline {
+			position: relative;
+			margin-bottom: 50px;
+		}
+
+		.timeline>li {
+			margin-bottom: 50px;
+			position: relative;
+			list-style: none;
+			animation: fadeInRight 1s ease-out;
+		}
+
+		.timeline>li .timeline-badge {
+			color: #fff;
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			font-size: 1.4em;
+			text-align: center;
+			position: absolute;
+			top: 16px;
+			left: 14px;
+			background-color: #c4c4c4;
+			border-radius: 50%;
+			animation: bounceIn 1s ease-out;
+		}
+
+		.timeline>li .timeline-panel {
+			width: calc(100% - 75px);
+			float: right;
+			padding: 20px;
+			position: relative;
+			animation: fadeInLeft 1s ease-out;
+		}
+
+		.timeline>li .timeline-panel:before {
+			content: "";
+			display: inline-block;
+			border-top: 10px solid transparent;
+			border-bottom: 10px solid transparent;
+			border-right: 10px solid #fff;
+			position: absolute;
+			top: 20px;
+			left: -9px;
+			animation: fadeInLeft 1s ease-out;
+		}
+
+		.timeline>li .timeline-panel:after {
+			content: "";
+			display: inline-block;
+			border-top: 10px solid transparent;
+			border-bottom: 10px solid transparent;
+			border-right: 10px solid #c4c4c4;
+			position: absolute;
+			top: 20px;
+			left: -8px;
+			animation: fadeInLeft 1s ease-out;
+		}
+
+
+
+		/* Animation styles */
+		@keyframes fadeInUp {
+			from {
+				opacity: 0;
+				transform: translate3d(0, 100%, 0);
+			}
+
+			to {
+				opacity: 1;
+				transform: none;
+			}
+		}
+
+		@keyframes fadeInRight {
+			from {
+				opacity: 0;
+				transform: translate3d(100%, 0, 0);
+			}
+
+			to {
+				opacity: 1;
+				transform: none;
+			}
+		}
+
+		@keyframes fadeInLeft {
+			from {
+				opacity: 0;
+				transform: translate3d(-100%, 0, 0);
+			}
+
+			to {
+				opacity: 1;
+				transform: none;
+			}
+		}
+
+		@keyframes bounceIn {
+
+			from,
+			60%,
+			75%,
+			90%,
+			to {
+				animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+			}
+
+			0% {
+				opacity: 0;
+				transform: scale3d(0.3, 0.3, 0.3);
+			}
+
+			60% {
+				opacity: 1;
+				transform: scale3d(1.1, 1.1, 1.1);
+			}
+
+			75% {
+				transform: scale3d(0.9, 0.9, 0.9);
+			}
+
+			@keyframes bounceIn {
+
+				from,
+				20%,
+				40%,
+				60%,
+				80%,
+				to {
+					animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+				}
+
+				0% {
+					opacity: 0;
+					transform: scale3d(0.3, 0.3, 0.3);
+				}
+
+				20% {
+					transform: scale3d(1.1, 1.1, 1.1);
+				}
+
+				40% {
+					transform: scale3d(0.9, 0.9, 0.9);
+				}
+
+				60% {
+					opacity: 1;
+					transform: scale3d(1.03, 1.03, 1.03);
+				}
+
+				80% {
+					transform: scale3d(0.97, 0.97, 0.97);
+				}
+
+				to {
+					opacity: 1;
+					transform: scale3d(1, 1, 1);
+				}
+			}
+	</style>
+
+</head>
+
+<body>
+
+	<div class="">
+		<!-- Top Navigation -->
+		<div
+			style="background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);height: 60px;;color:#fff;border-radius: 8px;width: 90%;margin:auto auto;">
+			<img class="aligncenter" src="../public/image/2.png" alt="...">
+		</div>
+
+		<div class="container">
+			<ul class="timeline">
+				<li>
+					<div class="timeline-badge">001</div>
+					<div class="timeline-panel">
+						<div class="timeline-heading">
+							<h3>jeekzhang</h3>
+						</div>
+						<div class="timeline-body">
+							<h4>计算机科学与技术学院</h4>
+						</div>
+					</div>
+				</li>
+				
+		</ul>
+	</div>
+	</div>
+	<!-- /container -->
+</body>
+
+</html>
