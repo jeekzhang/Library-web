@@ -28,4 +28,4 @@ Introduction to Database Systems Course (COMP130010.03, 2022 Spring) Project of 
 ## 注意事项
 
 - 该项目为静态网页版，只提供了前端页面和相关资源文件，不包含后端服务器或数据库。
-- 加入后端和数据库的完整版本可参考https://gitee.com/mingyuefusu/tushuguanlixitong，Library-web也是在该Gitee项目基础上进行修改而来。
+- 加入后端和数据库的完整版本可参考https://gitee.com/mingyuefusu/tushuguanlixitong， Library-web也是在该Gitee项目基础上进行修改而来。
