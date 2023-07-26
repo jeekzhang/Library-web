@@ -20,7 +20,7 @@ Introduction to Database Systems Course (COMP130010.03, 2022 Spring) Project of 
 
 ## 使用方法
 
-1. 在浏览器中打开网站链接 https://librarie.netlify.app/，即可查看网页。
+1. 在浏览器中打开网站链接 [https://librarie.netlify.app](https://librarie.netlify.app)，即可查看网页。
 2. 首页 (`index.html`) 用于网页链接初始化。
 3. 读者登录页面 (`readerLogin.html`) 允许读者进行登录操作，账户为【reader】，密码为【123456】。
 4. 404 页面 (`404.html`) 是一个错误页面，当访问不存在的页面时会显示该页面。
